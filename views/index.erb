@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -13,7 +13,7 @@
 
   <script type="text/javascript" src="<%= @asset_path %>js/jquery-1.4.2.min.js"></script>
   <script type="text/javascript" src="<%= @asset_path %>js/jquery.cycle.all.js"></script>
-	<script type="text/javascript" src="<%= @asset_path %>js/jquery-print.js"></script>
+  <script type="text/javascript" src="<%= @asset_path %>js/jquery-print.js"></script>
   <script type="text/javascript" src="<%= @asset_path %>js/jquery.batchImageLoad.js"></script>
 
   <script type="text/javascript" src="<%= @asset_path %>js/jquery.doubletap-0.1.js"></script>
@@ -21,13 +21,21 @@
   <script type="text/javascript" src="<%= @asset_path %>js/fg.menu.js"></script>
   <script type="text/javascript" src="<%= @asset_path %>js/showoff.js"></script>
   <script type="text/javascript" src="<%= @asset_path %>js/jTypeWriter.js"> </script>
-  <script type="text/javascript" src="<%= @asset_path %>js/sh_main.min.js"></script>
   <script type="text/javascript" src="<%= @asset_path %>js/core.js"></script>
   <script type="text/javascript" src="<%= @asset_path %>js/showoffcore.js"></script>
 
+  <script type="text/javascript" src="<%= @asset_path %>js/shCore.js"></script>
+  <script type="text/javascript" src="<%= @asset_path %>js/shAutoloader.js"></script>
+  <script type="text/javascript" src="<%= @asset_path %>js/shBrushRuby.js"></script>
+
+  <script type="text/javascript">
+
+  </script>
+
   <link type="text/css" href="<%= @asset_path %>css/fg.menu.css" media="screen" rel="stylesheet" />
   <link type="text/css" href="<%= @asset_path %>css/theme/ui.all.css" media="screen" rel="stylesheet" />
-  <link type="text/css" href="<%= @asset_path %>css/sh_style.css" rel="stylesheet" >
+  <link type="text/css" href="<%= @asset_path %>css/shCore.css" rel="stylesheet" >
+  <link type="text/css" href="<%= @asset_path %>css/shThemeDefault.css" rel="stylesheet" >
 
   <% css_files.each do |css_file| %>
     <link rel="stylesheet" href="file/<%= css_file %>" type="text/css"/>

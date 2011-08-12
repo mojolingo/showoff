@@ -190,18 +190,16 @@ class ShowOff < Sinatra::Application
       parser = CommandlineParser.new
 
       html.css('pre').each do |pre|
-        pre.css('code').each do |code|
-          out = code.text
-          lines = out.split("\n")
-          if lines.first[0, 3] == '@@@'
-            lang = lines.shift.gsub('@@@', '').strip
-            pre.set_attribute('class', 'sh_' + lang.downcase)
-            code.content = lines.join("\n")
-          end
+        out = pre.text
+        lines = out.split("\n")
+        if lines.first[0, 3] == '@@@'
+          lang = lines.shift.gsub('@@@', '').strip
+          pre.set_attribute('class', 'brush: ' + lang.downcase)
+          pre.content = lines.join("\n")
         end
       end
 
-      html.css('.commandline > pre > code').each do |code|
+      html.css('.commandline > pre').each do |code|
         out = code.text
         code.content = ''
         tree = parser.parse(out)
